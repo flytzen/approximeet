@@ -32,5 +32,8 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "css/[name].[chunkhash].css"
         })
-    ]
+    ],
+    devServer: {
+        contentBase: './dist'
+    },
 };

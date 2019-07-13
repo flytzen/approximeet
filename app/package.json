@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=development",
     "watch": "webpack --mode=development --watch",
-    "release": "webpack --mode=production"
+    "release": "webpack --mode=production",
+    "start": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,8 @@
     "ts-loader": "5.3.3",
     "typescript": "3.3.3",
     "webpack": "4.29.3",
-    "webpack-cli": "3.2.3"
+    "webpack-cli": "3.2.3",
+    "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
     "@aspnet/signalr": "^1.1.4",
