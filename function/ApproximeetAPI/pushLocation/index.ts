@@ -1,17 +1,20 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions"
 
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
-    context.log('HTTP trigger function processed a request.');
-
     // TODO: Make this typesafe
     const location = context.req.body;
-
-    context.log(location.lat);
-    context.log(location.lng);
+    console.log("location pushed", location);
 
     // TODO: Post the location to signalR
 
+    context.bindings.signalRMessages = [
+        {
+            "target": "newLocation",
+            "arguments": [ location ]
+        }
+    ];
 
+    // TODO: Post to storage
     
 };
 
